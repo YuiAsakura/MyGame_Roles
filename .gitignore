@@ -1,0 +1,13 @@
+Library/
+Logs/
+Temp/
+Obj/
+*.csporoj
+*.sln
+*.userprefs
+
+Builds/
+
+UserSettings/
+
+[Bb]uild/

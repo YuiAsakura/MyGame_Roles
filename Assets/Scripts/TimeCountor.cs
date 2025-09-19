@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class TimeCountor : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class TimeCountor : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timeText;
     // timeoutか関数呼び出し時の判定用
     private bool timeout = false;
+    string ResultSceneName = "ResultScene";
 
     void Update()
     {
@@ -25,7 +27,15 @@ public class TimeCountor : MonoBehaviour
                 timeText.text = "Time Out";
                 // もう呼び出さないようにする
                 timeout = true;
+                // リザルト処理
+                LoadResult();
             }
         }
+    }
+
+    private void LoadResult()
+    {
+        // リザルトシーン呼び出し
+        SceneManager.LoadScene(ResultSceneName);
     }
 }

@@ -53,7 +53,7 @@
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
-    <Compile Include="Assets\Reference.cs" />
+    <Compile Include="Assets\Scripts\TimeCountor.cs" />
     <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\StairsLayerTrigger.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
   </ItemGroup>

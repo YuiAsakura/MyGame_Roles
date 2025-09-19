@@ -19119,8 +19119,9 @@ GameObject:
   - component: {fileID: 1168362680}
   - component: {fileID: 1168362682}
   - component: {fileID: 1168362681}
+  - component: {fileID: 1168362683}
   m_Layer: 5
-  m_Name: TImeText
+  m_Name: TimeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19165,7 +19166,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Time
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 271cb8974dfb6ff45a0585a3ce96efa3, type: 2}
   m_sharedMaterial: {fileID: -9156839810371563466, guid: 271cb8974dfb6ff45a0585a3ce96efa3,
@@ -19231,7 +19232,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -82.6185, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -19245,6 +19246,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168362679}
   m_CullTransparentMesh: 1
+--- !u!114 &1168362683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168362679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbd7289884797145977d64d4548a048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeCountor
+  countdown: 10
+  timeText: {fileID: 1168362681}
 --- !u!1 &1177272031
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ Library/
 Logs/
 Temp/
 Obj/
-*.csporoj
+*.csproj
 *.sln
 *.userprefs
 

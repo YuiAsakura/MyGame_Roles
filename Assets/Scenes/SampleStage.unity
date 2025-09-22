@@ -15790,7 +15790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbd7289884797145977d64d4548a048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeCounter
-  timeLimit: 60
+  timeLimit: 10
   timeText: {fileID: 1168362681}
 --- !u!1001 &874798353
 PrefabInstance:
@@ -37587,9 +37587,9 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1213863289}
   - {fileID: 1467707186}
   - {fileID: 1622312051}
   - {fileID: 5628018140380570485}
   - {fileID: 1209782940}
   - {fileID: 1085133606}
-  - {fileID: 1213863289}

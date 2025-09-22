@@ -412,8 +412,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "xxx> cat RESULT.txt\nxxx> Thank you for playing!\n\nxxx> Checking your
-    play data...\nxxx> Update database...\n\nxxx> \n\nxxx>\nxxx>"
+  m_text: 'xxx> cat RESULT.txt
+
+    xxx> Thank you for playing!
+
+
+    xxx> Checking
+    your play data...
+
+    xxx> Update database...
+
+
+
+
+    xxx>
+
+    xxx>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 271cb8974dfb6ff45a0585a3ce96efa3, type: 2}
   m_sharedMaterial: {fileID: -9156839810371563466, guid: 271cb8974dfb6ff45a0585a3ce96efa3,
@@ -493,6 +507,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771248191}
   m_CullTransparentMesh: 1
+--- !u!1 &1019528467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019528469}
+  - component: {fileID: 1019528468}
+  m_Layer: 0
+  m_Name: ScriptsforUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1019528468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019528467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6c686e86e5465448d9387b9e8cc19c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResultRoleShow
+  ResultRole: {fileID: 1974792998}
+--- !u!4 &1019528469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019528467}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 320.92563, y: 236.01161, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497460276
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +1052,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -149.93173, w: 0}
+  m_margin: {x: 0, y: 0, z: -387.8719, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1194,6 +1253,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1019528469}
   - {fileID: 2081369606}
   - {fileID: 2067933608}
   - {fileID: 1510146606}

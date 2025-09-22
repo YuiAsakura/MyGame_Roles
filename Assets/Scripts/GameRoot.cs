@@ -4,7 +4,6 @@ using UnityEngine;
 public class GameRoot : MonoBehaviour
 {
     public static GameRoot I { get; private set;}
-    public bool isTimeout = false;
     public string ThisRole;
 
     private void Awake()

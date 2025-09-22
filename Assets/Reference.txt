@@ -7,6 +7,11 @@ Assets:
 [Pixel Art Icon Pack - RPG] https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605
 
 Collums:
+// Scripts
+[【Unity】ゲーム進行を管理する「GameManager」の作り方] https://gamedev.kurokumasoft.com/2022/08/09/akuro-ou-05-gamemanager/
+[「GameManager」は“なんでも屋”じゃない　Unityで迷子にならない設計メモ] https://qiita.com/game-tsukuru/items/d9ea2362d70399f7b6f8
+[Unityの「GameManager」を“役割”で細くする：最小コードで回したメモ] https://zenn.dev/game_dev/articles/f6b658d1b5980a
+[【Unity】シングルトンとは？実装方法とメリット・注意点を初心者向けに解説] https://umistudioblog.com/singletonhowto/
 // to use Git
 [branchを切ってからmergeするまで] https://qiita.com/Taku07/items/8c38038b56007de7caca
 [開発環境構築で迷わないための `git fetch` と `git pull` 完全ガイド] https://qiita.com/git_study_room01/items/3c398642814514f5c101

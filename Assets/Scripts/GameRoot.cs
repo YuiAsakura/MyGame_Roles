@@ -1,26 +1,17 @@
 using UnityEngine;
 
 
-public class GameRoot : MonoBehaviour
+public class GameRoot
 {
-    public static GameRoot I { get; private set;}
+    // 静的プロパティで唯一のインスタンスを提供
+    public static GameRoot I { get; private set; } = new GameRoot();
+    //public static GameRoot I { get; private set; }
     public string ThisRole;
 
-    private void Awake()
-    {
-        if (I != null && I != this) { Destroy(gameObject); return; }
-        I = this;
-        DontDestroyOnLoad(gameObject);  // シーンをまたいで生存
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //private void Awake()
+    //{
+    //    if (I != null && I != this) { Destroy(gameObject); return; }
+    //    I = this;
+    //    DontDestroyOnLoad(gameObject);  // シーンをまたいで生存
+    //}
 }

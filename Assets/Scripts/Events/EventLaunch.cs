@@ -1,0 +1,46 @@
+using UnityEngine;
+using UnityEngine.Events;
+
+public class ev01_bench : MonoBehaviour
+{
+    // このbool変数がtrueのときのみ、イベントをチェック
+    private bool isPlayerColliding = false;
+
+    // イベント発生時に実行したい処理をInspectorから登録するためのUnityEvent
+    public UnityEvent OnInteraction;
+
+    // プレイヤーがトリガーに侵入したとき
+    private void OnCollisionEnter(Collision collision)
+    {
+        // プレイヤーのタグをチェックして、プレイヤーが接触したことを記録
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isPlayerColliding = true;
+            Debug.Log("approched");
+        }
+    }
+
+    // プレイヤーがトリガーから出たとき
+    private void OnCollisionExit(Collision collision)
+    {
+        // プレイヤーのタグをチェックして、プレイヤーが接触していないことを記録
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isPlayerColliding = false;
+            Debug.Log("distant");
+        }
+    }
+
+    void Update()
+    {
+        // プレイヤーが接触中で、かつスペースキーが押されたとき
+        if (isPlayerColliding && Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Launch the Event");
+
+            // UnityEventに登録されたすべてのメソッドを実行
+            OnInteraction?.Invoke();
+        }
+        
+    }
+}

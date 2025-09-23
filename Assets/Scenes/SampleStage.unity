@@ -665,7 +665,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 8eb546cfc24c8c24196899cee5797135,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 253951957}
   m_SourcePrefab: {fileID: 100100000, guid: 8eb546cfc24c8c24196899cee5797135, type: 3}
 --- !u!4 &66455226 stripped
 Transform:
@@ -4844,6 +4848,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 238900577}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &253951956 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: 8eb546cfc24c8c24196899cee5797135,
+    type: 3}
+  m_PrefabInstance: {fileID: 66455225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &253951957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253951956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ev01_bench
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &257329672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15973,7 +15998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbd7289884797145977d64d4548a048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeCounter
-  timeLimit: 10
+  timeLimit: 100
   timeText: {fileID: 1168362681}
 --- !u!1001 &874798353
 PrefabInstance:
@@ -37175,6 +37200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5628018141983903117, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5628018141983903119, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
         type: 3}

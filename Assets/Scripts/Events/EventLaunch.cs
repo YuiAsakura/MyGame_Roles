@@ -10,7 +10,7 @@ public class ev01_bench : MonoBehaviour
     public UnityEvent OnInteraction;
 
     // プレイヤーがトリガーに侵入したとき
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         // プレイヤーのタグをチェックして、プレイヤーが接触したことを記録
         if (collision.gameObject.CompareTag("Player"))
@@ -21,7 +21,7 @@ public class ev01_bench : MonoBehaviour
     }
 
     // プレイヤーがトリガーから出たとき
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
         // プレイヤーのタグをチェックして、プレイヤーが接触していないことを記録
         if (collision.gameObject.CompareTag("Player"))

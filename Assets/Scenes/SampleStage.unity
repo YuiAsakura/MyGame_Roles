@@ -669,7 +669,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 8eb546cfc24c8c24196899cee5797135,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 253951957}
+      addedObject: {fileID: 253951960}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 8eb546cfc24c8c24196899cee5797135,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 253951961}
   m_SourcePrefab: {fileID: 100100000, guid: 8eb546cfc24c8c24196899cee5797135, type: 3}
 --- !u!4 &66455226 stripped
 Transform:
@@ -4854,7 +4858,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 66455225}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &253951957
+--- !u!114 &253951960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4869,6 +4873,33 @@ MonoBehaviour:
   OnInteraction:
     m_PersistentCalls:
       m_Calls: []
+--- !u!50 &253951961
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253951956}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &257329672
 PrefabInstance:
   m_ObjectHideFlags: 0

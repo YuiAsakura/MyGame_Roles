@@ -669,7 +669,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 8eb546cfc24c8c24196899cee5797135,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 253951960}
+      addedObject: {fileID: 253951966}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 8eb546cfc24c8c24196899cee5797135,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 253951965}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 8eb546cfc24c8c24196899cee5797135,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 253951964}
     - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 8eb546cfc24c8c24196899cee5797135,
         type: 3}
       insertIndex: -1
@@ -4858,21 +4866,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 66455225}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &253951960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253951956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ev01_bench
-  OnInteraction:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!50 &253951961
 Rigidbody2D:
   serializedVersion: 5
@@ -4900,6 +4893,60 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &253951964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253951956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+  messageSystem: {fileID: 253951965}
+--- !u!114 &253951965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253951956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c3352ea48ce1141aabd5eb305b57b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MessageSystem
+  messageText: {fileID: 731310732}
+  messageCanvas: {fileID: 1328497195}
+--- !u!114 &253951966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253951956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ev01_bench
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 253951964}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: ev01bench
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &257329672
 PrefabInstance:
   m_ObjectHideFlags: 0

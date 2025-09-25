@@ -15,6 +15,10 @@ public class MessageSystem : MonoBehaviour
     // メッセージを表示する関数
     public void ShowMessages(string[] messageArray)
     {
+        // メッセージ表示中フラグON
+        //GameRoot.I.isMessage = true;
+        GameRoot.I.isMove = false;
+
         // Canvasをアクティブにする
         messageCanvas.SetActive(true);
 
@@ -31,6 +35,7 @@ public class MessageSystem : MonoBehaviour
         {
             // 配列が空の場合は非表示にする
             messageCanvas.SetActive(false);
+            GameRoot.I.isMove = true;
         }
     }
 
@@ -63,6 +68,8 @@ public class MessageSystem : MonoBehaviour
             messageCanvas.SetActive(false);
             // 配列をクリア
             messages = null;
+
+            GameRoot.I.isMove = true;
         }
     }
 }

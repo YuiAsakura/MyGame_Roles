@@ -19,5 +19,13 @@ public class StateManage : MonoBehaviour
                 GameRoot.I.isMove = true;
             }
         }
+        else
+        {
+            if (GameRoot.I.isMessage == true || GameRoot.I.isEvent == true || GameRoot.I.isItem == true)
+            {
+                GameRoot.I.isMove = false;
+            }
+        }
+        Debug.Log($"isMove:{GameRoot.I.isMove}  isMessage:{GameRoot.I.isMessage}  isEvent:{GameRoot.I.isEvent}");
     }
 }

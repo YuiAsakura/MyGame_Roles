@@ -9,9 +9,9 @@ public class GameRoot
 
     // 状態管理用のbool変数
     public bool isMove = false;     // 操作中
-    //public bool isMessage = false;  // メッセージ表示中
-    //public bool isEvent = false;    // イベント実行中
-    //public bool isItem = false;     // アイテム表示中
+    public bool isMessage = false;  // メッセージ表示中
+    public bool isEvent = false;    // イベント実行中
+    public bool isItem = false;     // アイテム表示中
 
     public string ThisRole;
 

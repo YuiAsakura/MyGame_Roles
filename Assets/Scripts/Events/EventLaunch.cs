@@ -33,11 +33,12 @@ public class ev01_bench : MonoBehaviour
 
     void Update()
     {
-        // プレイヤーが接触中で、かつスペースキーが押されたとき
-        if (isPlayerColliding && Input.GetKeyDown(KeyCode.Space))
+        // プレイヤーが接触中で、かつスペースキーが押されたとき、かつプレイヤーが操作可能
+        if (isPlayerColliding && Input.GetKeyDown(KeyCode.Space) && GameRoot.I.isMove == true)
         {
+            GameRoot.I.isEvent = true;
+            
             Debug.Log("Launch the Event");
-
             // UnityEventに登録されたすべてのメソッドを実行
             OnInteraction?.Invoke();
         }

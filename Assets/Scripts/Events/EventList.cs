@@ -28,5 +28,6 @@ public class EventList : MonoBehaviour
             "OK",
         };
         messageSystem.ShowMessages(eventMassage);
+        GameRoot.I.isEvent = false;
     }
 }

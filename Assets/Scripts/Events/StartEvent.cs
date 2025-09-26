@@ -1,8 +1,11 @@
 using UnityEngine;
 
-public class TestMessagesShow : MonoBehaviour
+public class StartEvent : MonoBehaviour
 {
     public MessageSystem messageSystem;
+    public Options options;
+
+    public bool answer;
 
     void Start()
     {
@@ -12,6 +15,6 @@ public class TestMessagesShow : MonoBehaviour
             "スペースで決定"
         };
         messageSystem.ShowMessages(storyMessages);
-        
+        answer = options.SelectOption();
     }
 }

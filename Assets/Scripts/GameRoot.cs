@@ -14,6 +14,7 @@ public class GameRoot
     public bool isItem = false;     // アイテム表示中
 
     public string ThisRole;
+    public bool selected;
 
     //private void Awake()
     //{

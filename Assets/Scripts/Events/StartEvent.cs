@@ -3,9 +3,6 @@ using UnityEngine;
 public class StartEvent : MonoBehaviour
 {
     public MessageSystem messageSystem;
-    public Options options;
-
-    public bool answer;
 
     void Start()
     {
@@ -15,6 +12,5 @@ public class StartEvent : MonoBehaviour
             "スペースで決定"
         };
         messageSystem.ShowMessages(storyMessages);
-        answer = options.SelectOption();
     }
 }

@@ -24,6 +24,7 @@ public class EventList : MonoBehaviour
     {
         Debug.Log("event 01 bench");
         eventMassage = new string[] {
+            "SHOW_YESNO_OPTIONS_HERE",
             "ベンチで休みますか？\n時間を消費します",
             "OK",
         };

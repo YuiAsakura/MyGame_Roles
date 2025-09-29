@@ -5161,6 +5161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MessageSystem
   messageText: {fileID: 731310732}
   messageCanvas: {fileID: 1328497195}
+  optionWindow: {fileID: 2144169399}
+  selectArrow: {fileID: 425596330}
 --- !u!114 &253951966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15589,6 +15591,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MessageShow
   messageText: {fileID: 731310732}
   messageCanvas: {fileID: 1328497195}
+  optionWindow: {fileID: 2144169399}
+  selectArrow: {fileID: 425596330}
 --- !u!1001 &784359752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27622,6 +27626,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MessageSystem
   messageText: {fileID: 731310732}
   messageCanvas: {fileID: 1328497195}
+  optionWindow: {fileID: 2144169399}
+  selectArrow: {fileID: 425596330}
 --- !u!114 &1339765433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36560,7 +36566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2144169400
 RectTransform:
   m_ObjectHideFlags: 0

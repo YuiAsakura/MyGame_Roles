@@ -12,6 +12,45 @@ public class MessageSystem : MonoBehaviour
     private string[] messages;      // 表示するメッセージの配列
     private int currentIndex = 0;   // 現在表示中のメッセージのインデックス
 
+    // 選択肢用
+    [SerializeField] private GameObject optionWindow;
+    [SerializeField] private GameObject selectArrow;
+    private bool nowSelect; // ture = yes, false = no
+
+    private void Update()
+    {
+        // Canvasが非アクティブなら処理しない
+        if (!messageCanvas.activeInHierarchy) return;
+
+        // スペースキーが押されたかチェック
+        // かつメッセージウィンドウ操作可能か
+        if (Input.GetKeyDown(KeyCode.Space) && GameRoot.I.isActive_MWindow == true)
+        {
+            // 選択肢が表示されているなら回答を記録しオフに
+            if (optionWindow.activeInHierarchy)
+            {
+                GameRoot.I.selected = nowSelect;
+                optionWindow.SetActive(false);
+            }
+            // 次のメッセージへ進む
+            NextMessage();
+        }
+
+        // 選択肢処理
+        // optionWindowがアクティブなら
+        if (optionWindow.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                SelectMoveUp();
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                SelectMoveDown();
+            }
+        }
+    }
+
     // メッセージを表示する関数
     public void ShowMessages(string[] messageArray)
     {
@@ -28,7 +67,7 @@ public class MessageSystem : MonoBehaviour
         // 最初のメッセージを表示
         if (messages.Length > 0)
         {
-            messageText.text = messages[currentIndex];
+            ShowText();
         }
         else
         {
@@ -38,18 +77,26 @@ public class MessageSystem : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void ShowText()
     {
-        // Canvasが非アクティブなら処理しない
-        if (!messageCanvas.activeInHierarchy) return;
-
-        // スペースキーが押されたかチェック
-        // かつメッセージウィンドウ操作可能か
-        if (Input.GetKeyDown(KeyCode.Space) && GameRoot.I.isActive_MWindow == true)
+        // 次のメッセージが選択肢表示なら
+        if (messages[currentIndex] == "SHOW_YESNO_OPTIONS_HERE")
         {
-            // 次のメッセージへ進む
-            NextMessage();
+            // 選択肢を呼び出す
+            SelectOption();
+            currentIndex++;
         }
+        // 次のメッセージ表示
+        messageText.text = messages[currentIndex];      
+    }
+
+    private void SelectOption()
+    {
+        Debug.Log("called function SelectOption");
+
+        // 選択肢初期化（yes）
+        nowSelect = true;
+        optionWindow.SetActive(true);
     }
 
     private void NextMessage()
@@ -59,8 +106,7 @@ public class MessageSystem : MonoBehaviour
         // 次のメッセージが存在するかチェック
         if (currentIndex < messages.Length)
         {
-            // 次のメッセージを表示
-            messageText.text = messages[currentIndex];
+            ShowText();
         }
         else
         {
@@ -71,5 +117,24 @@ public class MessageSystem : MonoBehaviour
 
             GameRoot.I.isMessage = false;
         }
+    }
+
+        private void SelectMoveUp()
+    {
+        if (!nowSelect)
+        {
+            selectArrow.transform.localPosition = new Vector3(50f, 10f, 0f);
+            nowSelect = true;
+        }
+    }
+
+    private void SelectMoveDown()
+    {
+        if (nowSelect)
+        {
+            selectArrow.transform.localPosition = new Vector3(50f, -28f, 0f);
+            nowSelect = false;
+        }
+
     }
 }

@@ -17,7 +17,7 @@ public class PFPlayerMove : MonoBehaviour
 
     private void Update()
     {
-        if (GameRoot.I.isMove == true)
+        if (GameRoot.I.isActive_Move == true)
         {
             //Debug.Log("UpdateTest");
             Vector2 dir = Vector2.zero;

@@ -34,7 +34,7 @@ public class ev01_bench : MonoBehaviour
     void Update()
     {
         // プレイヤーが接触中で、かつスペースキーが押されたとき、かつプレイヤーが操作可能
-        if (isPlayerColliding && Input.GetKeyDown(KeyCode.Space) && GameRoot.I.isMove == true)
+        if (isPlayerColliding && Input.GetKeyDown(KeyCode.Space) && GameRoot.I.isActive_Move == true)
         {
             GameRoot.I.isEvent = true;
             

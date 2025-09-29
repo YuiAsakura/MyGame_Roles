@@ -44,7 +44,8 @@ public class MessageSystem : MonoBehaviour
         if (!messageCanvas.activeInHierarchy) return;
 
         // スペースキーが押されたかチェック
-        if (Input.GetKeyDown(KeyCode.Space))
+        // かつメッセージウィンドウ操作可能か
+        if (Input.GetKeyDown(KeyCode.Space) && GameRoot.I.isActive_MWindow == true)
         {
             // 次のメッセージへ進む
             NextMessage();

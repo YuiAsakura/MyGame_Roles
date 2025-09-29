@@ -8,13 +8,15 @@ public class GameRoot
     //public static GameRoot I { get; private set; }
 
     // 状態管理用のbool変数
-    public bool isMove = false;     // 操作中
-    public bool isMessage = false;  // メッセージ表示中
-    public bool isEvent = false;    // イベント実行中
-    public bool isItem = false;     // アイテム表示中
+    public bool isMessage;  // メッセージ表示中
+    public bool isEvent;    // イベント実行中
 
-    public string ThisRole;
-    public bool selected;
+    // 状態に応じて変更し、操作可能かを判別するbool変数
+    public bool isActive_Move;      // 移動可能
+    public bool isActive_MWindow;   // Message Windowおよび選択
+
+    public string ThisRole;     // 診断した役職の結果
+    public bool selected;       // yes or no
 
     //private void Awake()
     //{

@@ -159,7 +159,7 @@ public class MessageSystem : MonoBehaviour
         nowSelect = true;
         optionWindow.SetActive(true);
         // 矢印位置の初期化
-        selectArrow.transform.localPosition = new Vector3(50f, 10f, 0f);
+        selectArrow.transform.localPosition = new Vector3(140f, 70f, 0f);
     }
 
     /*
@@ -188,7 +188,7 @@ public class MessageSystem : MonoBehaviour
     {
         if (!nowSelect)
         {
-            selectArrow.transform.localPosition = new Vector3(50f, 10f, 0f);
+            selectArrow.transform.localPosition = new Vector3(140f, 70f, 0f);
             nowSelect = true;
         }
     }
@@ -197,7 +197,7 @@ public class MessageSystem : MonoBehaviour
     {
         if (nowSelect)
         {
-            selectArrow.transform.localPosition = new Vector3(50f, -28f, 0f);
+            selectArrow.transform.localPosition = new Vector3(140f, -5f, 0f);
             nowSelect = false;
         }
 

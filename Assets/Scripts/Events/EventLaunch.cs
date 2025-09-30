@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ev01_bench : MonoBehaviour
+public class EventLaunch : MonoBehaviour
 {
     // このbool変数がtrueのときのみ、イベントをチェック
     private bool isPlayerColliding = false;
@@ -37,6 +37,7 @@ public class ev01_bench : MonoBehaviour
         if (isPlayerColliding && Input.GetKeyDown(KeyCode.Space) && GameRoot.I.isActive_Move == true)
         {
             GameRoot.I.isEvent = true;
+            GameRoot.I.nowLabel = 0;
             
             Debug.Log("Launch the Event");
             // UnityEventに登録されたすべてのメソッドを実行

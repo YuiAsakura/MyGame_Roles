@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class MessageSystem : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class MessageSystem : MonoBehaviour
     [SerializeField] private GameObject selectArrow;
     private bool nowSelect; // ture = yes, false = no
 
+    /* 処理をコルーチンに変えたため使用せず
     private void Update()
     {
         // Canvasが非アクティブなら処理しない
@@ -50,33 +52,87 @@ public class MessageSystem : MonoBehaviour
             }
         }
     }
+    */
 
     // メッセージを表示する関数
-    public void ShowMessages(string[] messageArray)
+    public IEnumerator ShowMessages(string[] messageArray)
     {
-        // メッセージ表示中フラグON
+        // メッセージ表示の初期化処理
         GameRoot.I.isMessage = true;
-
-        // Canvasをアクティブにする
         messageCanvas.SetActive(true);
-
-        // 外部から渡されたメッセージ配列を格納
         messages = messageArray;
         currentIndex = 0;
 
         // 最初のメッセージを表示
         if (messages.Length > 0)
         {
-            ShowText();
+            //ShowText();
+            messageText.text = messages[currentIndex];
         }
         else
         {
-            // 配列が空の場合は非表示にする
+            // 配列が空の場合はここで終了
             messageCanvas.SetActive(false);
             GameRoot.I.isMessage = false;
+            yield break;
         }
+
+        // メッセージと選択肢の表示・入力を制限するメインループ
+        while (currentIndex < messages.Length)
+        {
+            // 選択肢表示用の特殊なメッセージ
+            if (messages[currentIndex] == "SHOW_YESNO_OPTIONS")
+            {
+                SelectOption();
+                //currentIndex++;
+
+                while (optionWindow.activeInHierarchy)
+                {
+                    // 上下キーで選択を変える
+                    if (Input.GetKeyDown(KeyCode.UpArrow))
+                    {
+                        SelectMoveUp();
+                    }
+                    else if (Input.GetKeyDown(KeyCode.DownArrow))
+                    {
+                        SelectMoveDown();
+                    }
+
+                    // スペースキーが押されたら選択を確定
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        GameRoot.I.selected = nowSelect;
+                        optionWindow.SetActive(false);
+                        // ループを抜けて次の処理へ
+                    }
+
+                    yield return null;
+                }
+            }
+            else
+            {
+                // 通常のメッセージではスペースキーが押されるまで待機
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            }
+
+            currentIndex++;
+
+            // 次のメッセージがあれば表示
+            if (currentIndex < messages.Length)
+            {
+                messageText.text = messages[currentIndex];
+            }
+        }
+
+        // すべてのメッセージ表示が完了
+        messageCanvas.SetActive(false);
+        messages = null;
+        GameRoot.I.isMessage = false;
+
+        yield break;
     }
 
+    /* 処理をコルーチンに変えたためShowMessages()と統合
     private void ShowText()
     {
         // 次のメッセージが選択肢表示なら
@@ -87,8 +143,9 @@ public class MessageSystem : MonoBehaviour
             currentIndex++;
         }
         // 次のメッセージ表示
-        messageText.text = messages[currentIndex];      
+        messageText.text = messages[currentIndex];
     }
+    */
 
     private void SelectOption()
     {
@@ -99,6 +156,7 @@ public class MessageSystem : MonoBehaviour
         optionWindow.SetActive(true);
     }
 
+    /*
     private void NextMessage()
     {
         currentIndex++;
@@ -118,8 +176,9 @@ public class MessageSystem : MonoBehaviour
             GameRoot.I.isMessage = false;
         }
     }
+    */
 
-        private void SelectMoveUp()
+    private void SelectMoveUp()
     {
         if (!nowSelect)
         {

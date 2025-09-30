@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 // Event一覧を管理するスクリプト
 // EventLaunchをアタッチした各オブジェクトに設定した関数が呼び出される
@@ -6,29 +7,36 @@ public class EventList : MonoBehaviour
 {
     public MessageSystem messageSystem;
 
-    private string[] eventMassage;
+    private string[] eventMessage;
+    public const string SHOW_YESNO_OPTIONS = "SHOW_YESNO_OPTIONS";
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void StartEV01()
     {
-
+        StartCoroutine(ev01bench());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator ev01bench()
     {
-
-    }
-
-    public void ev01bench()
-    {
-        Debug.Log("event 01 bench");
-        eventMassage = new string[] {
-            "SHOW_YESNO_OPTIONS_HERE",
+        eventMessage = new string[] {
+            "ベンチだ。",
+            SHOW_YESNO_OPTIONS,
             "ベンチで休みますか？\n時間を消費します",
-            "OK",
         };
-        messageSystem.ShowMessages(eventMassage);
+
+        // メッセージ表示コルーチンの完了を待つ
+        yield return StartCoroutine(messageSystem.ShowMessages(eventMessage));
+
+        // メッセージ表示が完了した後の処理
+        if (GameRoot.I.selected)
+        {
+            eventMessage = new string[] { "休みました" };
+        }
+        else
+        {
+            eventMessage = new string[] { "やめました" };
+        }
+        messageSystem.ShowMessages(eventMessage);
+
         GameRoot.I.isEvent = false;
     }
 }

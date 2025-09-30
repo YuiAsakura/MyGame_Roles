@@ -5180,7 +5180,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 253951964}
         m_TargetAssemblyTypeName: EventList, Assembly-CSharp
-        m_MethodName: ev01bench
+        m_MethodName: StartEV01
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27494,7 +27494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1328497196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27596,7 +27596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1339765430
 Transform:
   m_ObjectHideFlags: 0

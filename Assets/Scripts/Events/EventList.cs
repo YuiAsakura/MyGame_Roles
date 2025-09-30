@@ -30,18 +30,23 @@ public class EventList : MonoBehaviour
         // メッセージ表示が完了した後の処理
         if (GameRoot.I.selected)
         {
-            eventMessage = new string[] { "休みました" };
-            GameRoot.I.sensitive += 3;
-            GameRoot.I.currentTime -= 10;
-
+            if (GameRoot.I.currentTime >= 10)
+            {
+                eventMessage = new string[] { "休みました" };
+                GameRoot.I.sensitive += 3;
+                GameRoot.I.currentTime -= 10;
+            }
+            else
+            {
+                eventMessage = new string[] { "時間が足りません" };
+            }
         }
         else
         {
             eventMessage = new string[] { "やめました" };
         }
-        Debug.Log(eventMessage[0]);
+        //Debug.Log(eventMessage[0]);
         yield return StartCoroutine(messageSystem.ShowMessages(eventMessage));
-
         GameRoot.I.isEvent = false;
     }
 }

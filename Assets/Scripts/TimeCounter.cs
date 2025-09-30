@@ -48,6 +48,11 @@ public class TimeCounter : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            LoadResult();
+            OnTimeUp?.Invoke();
+        }
     }
 
     private void LoadResult()

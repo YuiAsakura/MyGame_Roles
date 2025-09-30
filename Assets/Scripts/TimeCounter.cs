@@ -24,7 +24,8 @@ public class TimeCounter : MonoBehaviour
 
     private void Update()
     {
-        if (GameRoot.I.currentTime > 0)
+        //Debug.Log(GameRoot.I.currentTime);
+        if (GameRoot.I.currentTime >= 0)
         {
             // 時間をカウントダウンする
             GameRoot.I.currentTime -= Time.deltaTime;
@@ -32,8 +33,9 @@ public class TimeCounter : MonoBehaviour
             // 時間を表示する
             timeText.text = "Time : " + GameRoot.I.currentTime.ToString("f0") + " s";
 
-            if (GameRoot.I.currentTime <= 0)
+            if (GameRoot.I.currentTime < 0)
             {
+                //Debug.Log("currenttime < 0");
                 GameRoot.I.currentTime = 0;
                 //timeText.text = "Time Out";
                 // 時間が0になったら一度だけ処理を実行

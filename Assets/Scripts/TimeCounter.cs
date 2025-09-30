@@ -11,7 +11,7 @@ public class TimeCounter : MonoBehaviour
     public event Action OnTimeUp;
 
     [SerializeField] public float timeLimit = 60f;
-    private float currentTime;
+    // private float currentTime;
     private bool isTimeUp = false;
 
     [SerializeField] private TextMeshProUGUI timeText;
@@ -19,22 +19,22 @@ public class TimeCounter : MonoBehaviour
 
     private void Start()
     {
-        currentTime = timeLimit;
+        GameRoot.I.currentTime = timeLimit;
     }
 
     private void Update()
     {
-        if (currentTime > 0)
+        if (GameRoot.I.currentTime > 0)
         {
             // 時間をカウントダウンする
-            currentTime -= Time.deltaTime;
+            GameRoot.I.currentTime -= Time.deltaTime;
 
             // 時間を表示する
-            timeText.text = "Time : " + currentTime.ToString("f0") + " s";
+            timeText.text = "Time : " + GameRoot.I.currentTime.ToString("f0") + " s";
 
-            if (currentTime <= 0)
+            if (GameRoot.I.currentTime <= 0)
             {
-                currentTime = 0;
+                GameRoot.I.currentTime = 0;
                 //timeText.text = "Time Out";
                 // 時間が0になったら一度だけ処理を実行
                 if (!isTimeUp)

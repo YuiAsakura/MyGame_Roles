@@ -30,11 +30,14 @@ public class EventList : MonoBehaviour
         // メッセージ表示が完了した後の処理
         if (GameRoot.I.selected)
         {
-            eventMessage = new string[] { "休みました", "test" };
+            eventMessage = new string[] { "休みました" };
+            GameRoot.I.sensitive += 3;
+            GameRoot.I.currentTime -= 10;
+
         }
         else
         {
-            eventMessage = new string[] { "やめました", "test" };
+            eventMessage = new string[] { "やめました" };
         }
         Debug.Log(eventMessage[0]);
         yield return StartCoroutine(messageSystem.ShowMessages(eventMessage));

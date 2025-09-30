@@ -58,11 +58,11 @@ public class MessageSystem : MonoBehaviour
     {
         if (optionWindow.activeInHierarchy && GameRoot.I.isActive_MWindow)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 SelectMoveUp();
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 SelectMoveDown();
             }

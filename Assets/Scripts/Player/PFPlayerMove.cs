@@ -21,26 +21,26 @@ public class PFPlayerMove : MonoBehaviour
         {
             //Debug.Log("UpdateTest");
             Vector2 dir = Vector2.zero;
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
                 Debug.Log("Put A");
                 dir.x = -1;
                 animator.SetInteger("Direction", 3);
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 Debug.Log("Put D");
                 dir.x = 1;
                 animator.SetInteger("Direction", 2);
             }
 
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
                 Debug.Log("Put W");
                 dir.y = 1;
                 animator.SetInteger("Direction", 1);
             }
-            else if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
                 Debug.Log("Put S");
                 dir.y = -1;

@@ -17,6 +17,7 @@ public class GameRoot
 
     public string ThisRole;     // 診断した役職の結果
     public bool selected;       // yes or no
+    public int nowLabel;        // イベント進行管理
 
     //private void Awake()
     //{

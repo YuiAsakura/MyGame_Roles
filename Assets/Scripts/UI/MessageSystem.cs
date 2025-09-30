@@ -77,6 +77,8 @@ public class MessageSystem : MonoBehaviour
     // メッセージを表示する関数
     public IEnumerator ShowMessages(string[] messageArray)
     {
+        yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.Space));
+
         // メッセージ表示の初期化処理
         GameRoot.I.isMessage = true;
         messageCanvas.SetActive(true);
@@ -98,12 +100,12 @@ public class MessageSystem : MonoBehaviour
 
             // 選択肢表示用の特殊なメッセージ
             if (messages[currentIndex] == "SHOW_YESNO_OPTIONS")
-            {
+            {   
                 // 次のメッセージも表示
                 currentIndex++;
                 messageText.text = messages[currentIndex];
 
-                Debug.Log("yes or no");
+                // Debug.Log("yes or no");
                 SelectOption();
 
                 // 選択肢の入力が完了するまで待機
@@ -128,6 +130,7 @@ public class MessageSystem : MonoBehaviour
         // すべてのメッセージ表示が完了
         messageCanvas.SetActive(false);
         messages = null;
+        messageText.text = null;
         GameRoot.I.isMessage = false;
 
         yield break;
@@ -150,11 +153,13 @@ public class MessageSystem : MonoBehaviour
 
     private void SelectOption()
     {
-        Debug.Log("called function SelectOption");
+        // Debug.Log("called function SelectOption");
 
         // 選択肢初期化（yes）
         nowSelect = true;
         optionWindow.SetActive(true);
+        // 矢印位置の初期化
+        selectArrow.transform.localPosition = new Vector3(50f, 10f, 0f);
     }
 
     /*

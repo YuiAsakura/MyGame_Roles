@@ -25,17 +25,19 @@ public class EventList : MonoBehaviour
 
         // メッセージ表示コルーチンの完了を待つ
         yield return StartCoroutine(messageSystem.ShowMessages(eventMessage));
+        Debug.Log("イベントメッセージ終了");
 
         // メッセージ表示が完了した後の処理
         if (GameRoot.I.selected)
         {
-            eventMessage = new string[] { "休みました" };
+            eventMessage = new string[] { "休みました", "test" };
         }
         else
         {
-            eventMessage = new string[] { "やめました" };
+            eventMessage = new string[] { "やめました", "test" };
         }
-        messageSystem.ShowMessages(eventMessage);
+        Debug.Log(eventMessage[0]);
+        yield return StartCoroutine(messageSystem.ShowMessages(eventMessage));
 
         GameRoot.I.isEvent = false;
     }

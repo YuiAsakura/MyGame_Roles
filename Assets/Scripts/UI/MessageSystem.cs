@@ -54,6 +54,26 @@ public class MessageSystem : MonoBehaviour
     }
     */
 
+    private void Update()
+    {
+        if (optionWindow.activeInHierarchy && GameRoot.I.isActive_MWindow)
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                SelectMoveUp();
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                SelectMoveDown();
+            }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GameRoot.I.selected = nowSelect;
+                optionWindow.SetActive(false);
+            }
+        }        
+    }
+
     // メッセージを表示する関数
     public IEnumerator ShowMessages(string[] messageArray)
     {
@@ -63,15 +83,9 @@ public class MessageSystem : MonoBehaviour
         messages = messageArray;
         currentIndex = 0;
 
-        // 最初のメッセージを表示
-        if (messages.Length > 0)
+        // 配列が空の場合はここで終了
+        if (messages.Length < 0)
         {
-            //ShowText();
-            messageText.text = messages[currentIndex];
-        }
-        else
-        {
-            // 配列が空の場合はここで終了
             messageCanvas.SetActive(false);
             GameRoot.I.isMessage = false;
             yield break;
@@ -80,48 +94,35 @@ public class MessageSystem : MonoBehaviour
         // メッセージと選択肢の表示・入力を制限するメインループ
         while (currentIndex < messages.Length)
         {
+            yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.Space));
+
             // 選択肢表示用の特殊なメッセージ
             if (messages[currentIndex] == "SHOW_YESNO_OPTIONS")
             {
+                // 次のメッセージも表示
+                currentIndex++;
+                messageText.text = messages[currentIndex];
+
+                Debug.Log("yes or no");
                 SelectOption();
-                //currentIndex++;
 
-                while (optionWindow.activeInHierarchy)
-                {
-                    // 上下キーで選択を変える
-                    if (Input.GetKeyDown(KeyCode.UpArrow))
-                    {
-                        SelectMoveUp();
-                    }
-                    else if (Input.GetKeyDown(KeyCode.DownArrow))
-                    {
-                        SelectMoveDown();
-                    }
-
-                    // スペースキーが押されたら選択を確定
-                    if (Input.GetKeyDown(KeyCode.Space))
-                    {
-                        GameRoot.I.selected = nowSelect;
-                        optionWindow.SetActive(false);
-                        // ループを抜けて次の処理へ
-                    }
-
-                    yield return null;
-                }
+                // 選択肢の入力が完了するまで待機
+                yield return new WaitUntil(() => !optionWindow.activeInHierarchy);
             }
             else
             {
+                messageText.text = messages[currentIndex];
                 // 通常のメッセージではスペースキーが押されるまで待機
-                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) && GameRoot.I.isActive_MWindow);
             }
 
             currentIndex++;
 
             // 次のメッセージがあれば表示
-            if (currentIndex < messages.Length)
-            {
-                messageText.text = messages[currentIndex];
-            }
+            //if (currentIndex < messages.Length)
+            //{
+            //    messageText.text = messages[currentIndex];
+            //}
         }
 
         // すべてのメッセージ表示が完了

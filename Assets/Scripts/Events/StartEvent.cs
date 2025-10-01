@@ -1,16 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 public class StartEvent : MonoBehaviour
 {
-    public MessageSystem messageSystem;
-
-    void Start()
+    private IEnumerator Start()
     {
         string[] storyMessages = new string[] {
             "操作方法",
             "AWSDで移動",
             "スペースで決定"
         };
-        messageSystem.ShowMessages(storyMessages);
+        yield return StartCoroutine(MessageSystem.I.ShowMessages(storyMessages));
     }
 }

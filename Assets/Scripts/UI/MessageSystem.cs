@@ -96,7 +96,7 @@ public class MessageSystem : MonoBehaviour
     // メッセージを表示する関数
     public IEnumerator ShowMessages(string[] messageArray)
     {
-        yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.Space));
+        //yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.Space));
 
         // メッセージ表示の初期化処理
         GameRoot.I.isMessage = true;
@@ -115,8 +115,6 @@ public class MessageSystem : MonoBehaviour
         // メッセージと選択肢の表示・入力を制限するメインループ
         while (currentIndex < messages.Length)
         {
-            yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.Space));
-
             // 選択肢表示用の特殊なメッセージ
             if (messages[currentIndex] == "SHOW_YESNO_OPTIONS")
             {   
@@ -137,6 +135,7 @@ public class MessageSystem : MonoBehaviour
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) && GameRoot.I.isActive_MWindow);
             }
 
+            yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.Space));
             currentIndex++;
 
             // 次のメッセージがあれば表示

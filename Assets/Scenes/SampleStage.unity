@@ -27569,14 +27569,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1339765430}
   - component: {fileID: 1339765433}
-  - component: {fileID: 1339765432}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1339765430
 Transform:
   m_ObjectHideFlags: 0
@@ -27592,22 +27591,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1213863289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1339765432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339765429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96c3352ea48ce1141aabd5eb305b57b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MessageSystem
-  messageText: {fileID: 731310732}
-  messageCanvas: {fileID: 1328497195}
-  optionWindow: {fileID: 2144169399}
-  selectArrow: {fileID: 425596330}
 --- !u!114 &1339765433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27620,7 +27603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf70b7bc216a1c7438bd8ecdbad1c173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartEvent
-  messageSystem: {fileID: 1339765432}
 --- !u!1001 &1369492698
 PrefabInstance:
   m_ObjectHideFlags: 0

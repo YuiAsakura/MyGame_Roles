@@ -5,6 +5,9 @@ using System.Collections;
 
 public class MessageSystem : MonoBehaviour
 {
+    // 外部からアクセスできる唯一のインスタンス
+    public static MessageSystem I { get; private set; }
+
     // メッセージを表示するテキスト
     [SerializeField] private TextMeshProUGUI messageText;
     // メッセージ表示全体を制御するCanvas
@@ -17,6 +20,22 @@ public class MessageSystem : MonoBehaviour
     [SerializeField] private GameObject optionWindow;
     [SerializeField] private GameObject selectArrow;
     private bool nowSelect; // ture = yes, false = no
+
+    private void Awake()
+    {
+        // もしインスタンスがまだ存在しなければ、自身をインスタンスとして設定
+        if (I == null)
+        {
+            I = this;
+            // シーンをまたいでオブジェクトを維持する
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            // すでにインスタンスが存在する場合は、新しいオブジェクトを破棄
+            Destroy(this.gameObject);
+        }
+    }
 
     /* 処理をコルーチンに変えたため使用せず
     private void Update()
@@ -71,7 +90,7 @@ public class MessageSystem : MonoBehaviour
                 GameRoot.I.selected = nowSelect;
                 optionWindow.SetActive(false);
             }
-        }        
+        }
     }
 
     // メッセージを表示する関数

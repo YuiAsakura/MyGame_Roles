@@ -12,13 +12,17 @@ public class EventList : MonoBehaviour
     {
         StartCoroutine(ev01bench());
     }
+    public void StartEV02()
+    {
+        StartCoroutine(ev02chest());
+    }
 
     private IEnumerator ev01bench()
     {
         eventMessage = new string[] {
             "硬そうな石のベンチだ。",
             SHOW_YESNO_OPTIONS,
-            "ベンチで休みますか？\n時間を消費します",
+            "ベンチで休みますか？\n時間を消費します。",
         };
 
         // メッセージ表示コルーチンの完了を待つ
@@ -29,19 +33,19 @@ public class EventList : MonoBehaviour
         {
             if (GameRoot.I.currentTime >= 10)
             {
-                eventMessage = new string[] { "落ち着いた気分になった" };
+                eventMessage = new string[] { "落ち着いた気分になった。" };
                 GameRoot.I.sensitive += 2;
                 GameRoot.I.patience += 5;
                 GameRoot.I.currentTime -= 10;
             }
             else
             {
-                eventMessage = new string[] { "ゆっくりできる時間はなさそうだ" };
+                eventMessage = new string[] { "ゆっくりできる時間はなさそうだ..." };
             }
         }
         else
         {
-            eventMessage = new string[] { "やめておこう" };
+            eventMessage = new string[] { "やめておこう。" };
         }
 
         yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
@@ -51,7 +55,7 @@ public class EventList : MonoBehaviour
     private IEnumerator ev02chest()
     {
         eventMessage = new string[] {
-            "ふたが外れかけている宝箱がある",
+            "ふたが外れかけている宝箱がある。",
             SHOW_YESNO_OPTIONS,
             "開けてみようか？"
         };
@@ -60,11 +64,12 @@ public class EventList : MonoBehaviour
         // 選択結果に応じて分岐
         if (!GameRoot.I.selected)
         {
-            eventMessage = new string[] { "触らないでおいた" };
+            eventMessage = new string[] { "触らないでおいた。" };
             yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
             GameRoot.I.decision += 1;
             GameRoot.I.insight += 3;
-            // 処理を終了
+            // イベントを終了
+            GameRoot.I.isEvent = false;
             yield break;
         }
 
@@ -73,15 +78,16 @@ public class EventList : MonoBehaviour
 
         if (!GameRoot.I.selected)
         {
-            eventMessage = new string[] { "やっぱりやめておこう" };
+            eventMessage = new string[] { "やっぱりやめておこう。" };
             yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
             GameRoot.I.insight += 2;
             GameRoot.I.patience += 2;
-            // 処理を終了
+            // イベントを終了
+            GameRoot.I.isEvent = false;
             yield break;
         }
 
-        eventMessage = new string[] { "中身は空っぽだった。\n誰かに開けられた後のようだ" };
+        eventMessage = new string[] { "中身は空っぽだった。\n誰かに開けられた後のようだ。" };
         yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
         GameRoot.I.seeking += 2;
         GameRoot.I.decision += 2;

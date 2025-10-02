@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 // Event一覧を管理するスクリプト
 // EventLaunchをアタッチした各オブジェクトに設定した関数が呼び出される
@@ -8,12 +9,26 @@ public class EventList : MonoBehaviour
     private string[] eventMessage;
     public const string SHOW_YESNO_OPTIONS = "SHOW_YESNO_OPTIONS";
 
+    // イベントカウントの配列要素を増加させる
+    private void addeventCount(int eventNum)
+    {
+        if (eventNum >= GameRoot.I.eventCount.Length)
+        {
+            // 配列サイズを2まで増加
+            Array.Resize(ref GameRoot.I.eventCount, eventNum + 1);
+        }
+        GameRoot.I.eventCount[eventNum]++;
+    }
+
     public void StartEV01()
     {
+        addeventCount(1);
         StartCoroutine(ev01bench());
     }
+
     public void StartEV02()
     {
+        addeventCount(2);
         StartCoroutine(ev02chest());
     }
 

@@ -16,7 +16,7 @@ public class EventLaunch : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerColliding = true;
-            Debug.Log("approched");
+            // Debug.Log("approched");
         }
     }
 
@@ -27,7 +27,7 @@ public class EventLaunch : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerColliding = false;
-            Debug.Log("distant");
+            // Debug.Log("distant");
         }
     }
 
@@ -37,9 +37,8 @@ public class EventLaunch : MonoBehaviour
         if (isPlayerColliding && Input.GetKeyDown(KeyCode.Space) && GameRoot.I.isActive_Move == true)
         {
             GameRoot.I.isEvent = true;
-            GameRoot.I.nowLabel = 0;
-            
-            Debug.Log("Launch the Event");
+            GameRoot.I.eventCount[0]++;     // 総イベント実行回数を1増加
+
             // UnityEventに登録されたすべてのメソッドを実行
             OnInteraction?.Invoke();
         }

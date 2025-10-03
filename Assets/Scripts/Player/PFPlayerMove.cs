@@ -19,7 +19,7 @@ public class PFPlayerMove : MonoBehaviour
     {
         if (GameRoot.I.isActive_Move == true)
         {
-            Debug.Log(GameRoot.I.PlayerMove);
+            //Debug.Log(GameRoot.I.PlayerMove);
             Vector2 dir = Vector2.zero;
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {

@@ -4,6 +4,8 @@ public class EventManage : MonoBehaviour
 {
     void Update()
     {
+        Debug.Log($"🌟:{GameRoot.I.seeking} 👍:{GameRoot.I.decision} ❤:{GameRoot.I.sensitive} 💭:{GameRoot.I.patience} 🔎:{GameRoot.I.insight}");
+
         // イベント総実行回数に応じて個性値増加
         switch (GameRoot.I.eventCount[0])
         {

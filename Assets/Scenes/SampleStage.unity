@@ -6093,6 +6093,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ee2a103c43ee146b86ace4c5ec03d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveObjectEvent
+--- !u!1 &357852762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5055698509961064897, guid: 6d6991dbbdeecb1488bbf78c063d1235,
+    type: 3}
+  m_PrefabInstance: {fileID: 5055698509990871160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &357852765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357852762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &357852766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357852762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 357852765}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV03
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &358943147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38003,7 +38048,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5055698509961064897, guid: 6d6991dbbdeecb1488bbf78c063d1235,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 357852766}
+    - targetCorrespondingSourceObject: {fileID: 5055698509961064897, guid: 6d6991dbbdeecb1488bbf78c063d1235,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 357852765}
   m_SourcePrefab: {fileID: 100100000, guid: 6d6991dbbdeecb1488bbf78c063d1235, type: 3}
 --- !u!1001 &5152450809945780874
 PrefabInstance:

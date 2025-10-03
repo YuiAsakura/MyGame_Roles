@@ -23,6 +23,7 @@ public class GameRoot
     public float[] eventTime= { 0 };   // イベントを実行した時間
     public int objectMove;      // プレイヤーがオブジェクトを動かしたか
     public int PlayerMove;      // プレイヤーが何歩動いたか
+    public float waitedTime;
 
     // 役職管理用の変数
     public string ThisRole;     // 診断した役職の結果

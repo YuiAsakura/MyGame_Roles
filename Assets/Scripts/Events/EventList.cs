@@ -20,6 +20,7 @@ public class EventList : MonoBehaviour
         GameRoot.I.eventCount[eventNum]++;
     }
 
+    /* ここからイベント起動用の関数 */
     public void StartEV01()
     {
         addeventCount(1);
@@ -38,6 +39,13 @@ public class EventList : MonoBehaviour
         StartCoroutine(ev03monument());
     }
 
+    public void StartEv04()
+    {
+        addeventCount(4);
+        StartCoroutine(ev04pray());
+    }
+
+    /* ここからイベント本体の関数 */
     private IEnumerator ev01bench()
     {
         eventMessage = new string[] {
@@ -125,5 +133,58 @@ public class EventList : MonoBehaviour
         GameRoot.I.patience += 1;
 
         GameRoot.I.isEvent = false;
+    }
+
+    private IEnumerator ev04pray()
+    {
+        eventMessage = new string[] {
+            "神聖なたたずまいをしている女性の銅像がある。",
+            SHOW_YESNO_OPTIONS,
+            "祈りますか？"
+        };
+
+        yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
+
+        if (GameRoot.I.selected)
+        {
+            // ScreenFaderのインスタンスを取得（GameObject.Find()は非推奨ですが、ここでは簡潔さのために使用）
+            // EventManageのようなシングルトンクラスにScreenFaderをアタッチするのが理想的らしい
+            // そのうち調整したい
+            ScreenFader screenFader = FindObjectOfType<ScreenFader>();
+            if (screenFader == null)
+            {
+                Debug.LogError("Fader コンポーネントが見つかりません。");
+                GameRoot.I.isEvent = false;
+                yield break;
+            }
+
+            // フェードアウトとキー入力待機を実行し、時間を取得
+            StartCoroutine(screenFader.EventWaitFade());
+
+            // 時間に応じて個性値変更
+            if (GameRoot.I.waitedTime < 2.0f)
+            {
+                GameRoot.I.decision += 2;
+            }
+            else if (GameRoot.I.waitedTime < 5.0f)
+            {
+                GameRoot.I.sensitive += 3;
+            }
+            else
+            {
+                GameRoot.I.patience += 5;
+            }
+        }
+        else
+        {
+            eventMessage = new string[] { "やめておこう。" };
+            yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
+            GameRoot.I.decision += 1;
+            GameRoot.I.insight += 1;
+        }
+
+        // イベント終了処理
+        GameRoot.I.isEvent = false;
+
     }
 }

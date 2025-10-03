@@ -32,6 +32,12 @@ public class EventList : MonoBehaviour
         StartCoroutine(ev02chest());
     }
 
+    public void StartEV03()
+    {
+        addeventCount(3);
+        StartCoroutine(ev03monument());
+    }
+
     private IEnumerator ev01bench()
     {
         eventMessage = new string[] {
@@ -55,7 +61,7 @@ public class EventList : MonoBehaviour
             }
             else
             {
-                eventMessage = new string[] { "ゆっくりできる時間はなさそうだ..." };
+                eventMessage = new string[] { "ゆっくりできる時間はなさそうだ...。" };
             }
         }
         else
@@ -106,7 +112,18 @@ public class EventList : MonoBehaviour
         yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
         GameRoot.I.seeking += 2;
         GameRoot.I.decision += 2;
-        
+
+        GameRoot.I.isEvent = false;
+    }
+
+    private IEnumerator ev03monument()
+    {
+        Debug.Log("event03");
+        eventMessage = new string[] { "刻まれた文字が青く光っている石碑だ。\n不思議な力を感じる...。" };
+        yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
+        GameRoot.I.sensitive += 1;
+        GameRoot.I.patience += 1;
+
         GameRoot.I.isEvent = false;
     }
 }

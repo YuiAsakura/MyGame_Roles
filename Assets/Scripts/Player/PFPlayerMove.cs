@@ -19,32 +19,32 @@ public class PFPlayerMove : MonoBehaviour
     {
         if (GameRoot.I.isActive_Move == true)
         {
-            //Debug.Log("UpdateTest");
+            //Debug.Log(GameRoot.I.PlayerMove);
             Vector2 dir = Vector2.zero;
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
-                Debug.Log("Put A");
                 dir.x = -1;
                 animator.SetInteger("Direction", 3);
+                GameRoot.I.PlayerMove++;
             }
             else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
-                Debug.Log("Put D");
                 dir.x = 1;
                 animator.SetInteger("Direction", 2);
+                GameRoot.I.PlayerMove++;
             }
 
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
-                Debug.Log("Put W");
                 dir.y = 1;
                 animator.SetInteger("Direction", 1);
+                GameRoot.I.PlayerMove++;
             }
             else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
-                Debug.Log("Put S");
                 dir.y = -1;
                 animator.SetInteger("Direction", 0);
+                GameRoot.I.PlayerMove++;
             }
 
             dir.Normalize();

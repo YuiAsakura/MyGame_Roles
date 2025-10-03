@@ -25,8 +25,9 @@ public class ScreenFader : MonoBehaviour
         // フェードイン開始
         yield return StartCoroutine(Fade(0f));
 
-        // 待機時間を返す
-        yield return waitTime;
+        // 待機時間を記録
+        GameRoot.I.waitedTime = waitTime;
+        yield return null;
     }
 
     private IEnumerator Fade(float targetAlpha)

@@ -51,6 +51,12 @@ public class EventList : MonoBehaviour
         StartCoroutine(ev05coffin());
     }
 
+    public void StartEV06()
+    {
+        addeventCount(6);
+        StartCoroutine(ev06shade());
+    }
+
     /* ここからイベント本体の関数 */
     private IEnumerator ev01bench()
     {
@@ -222,6 +228,44 @@ public class EventList : MonoBehaviour
             GameRoot.I.patience += 3;
         }
 
+        GameRoot.I.isEvent = false;
+    }
+
+    private IEnumerator ev06shade()
+    {
+        eventMessage = new string[] { "風が吹いていて心地よい。" };
+        yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
+
+        // ScreenFaderのインスタンスを取得（GameObject.Find()は非推奨ですが、ここでは簡潔さのために使用）
+        // EventManageのようなシングルトンクラスにScreenFaderをアタッチするのが理想的らしい
+        // そのうち調整したい
+        ScreenFader screenFader = FindObjectOfType<ScreenFader>();
+        if (screenFader == null)
+        {
+            Debug.LogError("Fader コンポーネントが見つかりません。");
+            GameRoot.I.isEvent = false;
+            yield break;
+        }
+
+        // フェードアウトとキー入力待機を実行し、時間を取得
+        yield return StartCoroutine(screenFader.EventWaitFade());
+
+        if (GameRoot.I.waitedTime < 3.0f)
+        {
+            GameRoot.I.sensitive += 1;
+            GameRoot.I.patience += 1;
+        }
+        else if (GameRoot.I.waitedTime < 6.0f)
+        {
+            GameRoot.I.sensitive += 2;
+            GameRoot.I.patience += 2;
+        }
+        else
+        {
+            GameRoot.I.sensitive += 3;
+            GameRoot.I.patience += 3;
+        }
+        
         GameRoot.I.isEvent = false;
     }
 }

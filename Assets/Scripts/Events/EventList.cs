@@ -18,6 +18,15 @@ public class EventList : MonoBehaviour
             Array.Resize(ref GameRoot.I.eventCount, eventNum + 1);
         }
         GameRoot.I.eventCount[eventNum]++;
+
+        string EventCountString = "";
+
+        for (int i = 0; i < GameRoot.I.eventCount.Length; i++)
+        {
+            EventCountString = EventCountString + i.ToString() + ":" + GameRoot.I.eventCount[i].ToString() + " ";
+        }
+
+        Debug.Log("EventCount\n" + EventCountString);
     }
 
     /* ここからイベント起動用の関数 */
@@ -59,7 +68,7 @@ public class EventList : MonoBehaviour
 
     public void StartEV07()
     {
-        addeventCount(6);
+        addeventCount(7);
         StartCoroutine(ev07rock());
     }
 

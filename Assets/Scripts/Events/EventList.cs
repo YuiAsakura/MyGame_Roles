@@ -195,7 +195,7 @@ public class EventList : MonoBehaviour
 
     }
 
-    private IEnumerator ec05coffin()
+    private IEnumerator ev05coffin()
     {
         eventMessage = new string[] {
             "古びた棺桶だ。",
@@ -218,7 +218,8 @@ public class EventList : MonoBehaviour
             eventMessage = new string[] { "むやみに漁るのはやめておこう。" };
             yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
 
-            GameRoot.I.sensitive += 3;
+            GameRoot.I.sensitive += 1;
+            GameRoot.I.patience += 3;
         }
 
         GameRoot.I.isEvent = false;

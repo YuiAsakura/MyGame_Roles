@@ -266,5 +266,6 @@ public class EventList : MonoBehaviour
             GameRoot.I.patience += 3;
         }
         
+        GameRoot.I.isEvent = false;
     }
 }

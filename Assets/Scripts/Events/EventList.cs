@@ -144,6 +144,7 @@ public class EventList : MonoBehaviour
         };
 
         yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
+        //Debug.Log("イベント04メッセージ表示終了");
 
         if (GameRoot.I.selected)
         {
@@ -159,7 +160,7 @@ public class EventList : MonoBehaviour
             }
 
             // フェードアウトとキー入力待機を実行し、時間を取得
-            StartCoroutine(screenFader.EventWaitFade());
+            yield return StartCoroutine(screenFader.EventWaitFade());
 
             // 時間に応じて個性値変更
             if (GameRoot.I.waitedTime < 2.0f)

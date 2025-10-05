@@ -45,6 +45,12 @@ public class EventList : MonoBehaviour
         StartCoroutine(ev04pray());
     }
 
+    public void StartEV05()
+    {
+        addeventCount(5);
+        StartCoroutine(ev05coffin());
+    }
+
     /* ここからイベント本体の関数 */
     private IEnumerator ev01bench()
     {
@@ -187,5 +193,34 @@ public class EventList : MonoBehaviour
         // イベント終了処理
         GameRoot.I.isEvent = false;
 
+    }
+
+    private IEnumerator ec05coffin()
+    {
+        eventMessage = new string[] {
+            "古びた棺桶だ。",
+            SHOW_YESNO_OPTIONS,
+            "開けてみようか...？"
+        };
+
+        yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
+
+        if (GameRoot.I.selected)
+        {
+            eventMessage = new string[] { "中身は空っぽだった。", "なんだか体が重くなった気がする...。" };
+            yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
+
+            GameRoot.I.seeking += 2;
+            GameRoot.I.insight += 1;
+        }
+        else
+        {
+            eventMessage = new string[] { "むやみに漁るのはやめておこう。" };
+            yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
+
+            GameRoot.I.sensitive += 3;
+        }
+
+        GameRoot.I.isEvent = false;
     }
 }

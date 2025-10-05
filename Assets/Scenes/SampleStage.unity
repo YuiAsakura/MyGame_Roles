@@ -571,7 +571,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: ba7fef4c928d8c4459466bf93171730e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 877014553}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: ba7fef4c928d8c4459466bf93171730e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 877014552}
   m_SourcePrefab: {fileID: 100100000, guid: ba7fef4c928d8c4459466bf93171730e, type: 3}
 --- !u!1001 &59893700
 PrefabInstance:
@@ -2019,6 +2027,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8150476868300563375, guid: 2e2ac125e54a1e44780363d638b1df34,
     type: 3}
   m_PrefabInstance: {fileID: 122070902}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &122343950 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: 139b2d65b3145ad45bc13b6d111199de,
+    type: 3}
+  m_PrefabInstance: {fileID: 380286613}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &123584949
 GameObject:
@@ -4685,7 +4699,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 4c4e80b50a323dc478f7c84e0b8fdad2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1861155381}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 4c4e80b50a323dc478f7c84e0b8fdad2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1861155380}
   m_SourcePrefab: {fileID: 100100000, guid: 4c4e80b50a323dc478f7c84e0b8fdad2, type: 3}
 --- !u!4 &219655023 stripped
 Transform:
@@ -5119,6 +5141,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 238900577}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &244347674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: d5762f992ea3bd544bb8287f66e8f844,
+    type: 3}
+  m_PrefabInstance: {fileID: 815035968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &253951956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: 8eb546cfc24c8c24196899cee5797135,
@@ -5348,6 +5376,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5100217437599595380, guid: 8d15c39fd3e3cab47ab96fbaf6dc2f92,
     type: 3}
   m_PrefabInstance: {fileID: 258539806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &269200002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: 713b33322b495794e92184973ece3034,
+    type: 3}
+  m_PrefabInstance: {fileID: 2079341246}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &270079504
 PrefabInstance:
@@ -10989,7 +11023,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 139b2d65b3145ad45bc13b6d111199de,
+        type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 380286618}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 139b2d65b3145ad45bc13b6d111199de,
+        type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 380286617}
   m_SourcePrefab: {fileID: 100100000, guid: 139b2d65b3145ad45bc13b6d111199de, type: 3}
 --- !u!4 &380286614 stripped
 Transform:
@@ -10997,6 +11039,45 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 380286613}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &380286617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122343950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &380286618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122343950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602948988}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV07
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &391280674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11070,6 +11151,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8552570291598617937, guid: bf462882706828c44a4465986b6fb8d2,
     type: 3}
   m_PrefabInstance: {fileID: 391280674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &392217693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: ba7fef4c928d8c4459466bf93171730e,
+    type: 3}
+  m_PrefabInstance: {fileID: 57612268}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &403104677
 GameObject:
@@ -12750,7 +12837,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: f826bf48ad5bedc4ab6cabe6c4e498e8,
+        type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1039672541}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: f826bf48ad5bedc4ab6cabe6c4e498e8,
+        type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1039672540}
   m_SourcePrefab: {fileID: 100100000, guid: f826bf48ad5bedc4ab6cabe6c4e498e8, type: 3}
 --- !u!1 &519420028
 GameObject:
@@ -14616,7 +14711,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: ba7fef4c928d8c4459466bf93171730e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2082272376}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: ba7fef4c928d8c4459466bf93171730e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2082272375}
   m_SourcePrefab: {fileID: 100100000, guid: ba7fef4c928d8c4459466bf93171730e, type: 3}
 --- !u!4 &677148540 stripped
 Transform:
@@ -15798,7 +15901,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 6d69371a87148ee4dac7b2b814437ffd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1314898749}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 6d69371a87148ee4dac7b2b814437ffd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1314898748}
   m_SourcePrefab: {fileID: 100100000, guid: 6d69371a87148ee4dac7b2b814437ffd, type: 3}
 --- !u!4 &781189523 stripped
 Transform:
@@ -16143,7 +16254,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: d5762f992ea3bd544bb8287f66e8f844,
+        type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 815035973}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: d5762f992ea3bd544bb8287f66e8f844,
+        type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 815035972}
   m_SourcePrefab: {fileID: 100100000, guid: d5762f992ea3bd544bb8287f66e8f844, type: 3}
 --- !u!4 &815035969 stripped
 Transform:
@@ -16151,6 +16270,45 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 815035968}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &815035972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244347674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &815035973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244347674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602948988}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV07
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &822909573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16862,6 +17020,45 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 57612268}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &877014552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392217693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &877014553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392217693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602948988}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV07
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &880043626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17264,7 +17461,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 713b33322b495794e92184973ece3034,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1019718346}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 713b33322b495794e92184973ece3034,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1019718345}
   m_SourcePrefab: {fileID: 100100000, guid: 713b33322b495794e92184973ece3034, type: 3}
 --- !u!1 &899065929 stripped
 GameObject:
@@ -18499,6 +18704,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1002570167}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1019718343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: 713b33322b495794e92184973ece3034,
+    type: 3}
+  m_PrefabInstance: {fileID: 896733248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1019718345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019718343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &1019718346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019718343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602948988}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV07
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1021593422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19019,6 +19269,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1037571724}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1039672537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: f826bf48ad5bedc4ab6cabe6c4e498e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 515501143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1039672540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039672537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &1039672541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039672537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602948988}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV07
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1048837927
 GameObject:
   m_ObjectHideFlags: 0
@@ -20734,7 +21029,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 6d69371a87148ee4dac7b2b814437ffd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1696563837}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 6d69371a87148ee4dac7b2b814437ffd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1696563836}
   m_SourcePrefab: {fileID: 100100000, guid: 6d69371a87148ee4dac7b2b814437ffd, type: 3}
 --- !u!1001 &1192309858
 PrefabInstance:
@@ -27712,6 +28015,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1299896508}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1303004924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: 6d69371a87148ee4dac7b2b814437ffd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1190283996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1314898746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: 6d69371a87148ee4dac7b2b814437ffd,
+    type: 3}
+  m_PrefabInstance: {fileID: 781189522}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1314898748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314898746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &1314898749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314898746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602948988}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV07
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1319077729
 GameObject:
   m_ObjectHideFlags: 0
@@ -30108,7 +30462,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 713b33322b495794e92184973ece3034,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1602948989}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 713b33322b495794e92184973ece3034,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1602948988}
   m_SourcePrefab: {fileID: 100100000, guid: 713b33322b495794e92184973ece3034, type: 3}
 --- !u!4 &1515572125 stripped
 Transform:
@@ -31499,6 +31861,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1602627392}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1602948986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: 713b33322b495794e92184973ece3034,
+    type: 3}
+  m_PrefabInstance: {fileID: 1515572124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1602948988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602948986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &1602948989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602948986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602948988}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV07
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1603081125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32490,6 +32897,45 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1190283996}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1696563836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303004924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &1696563837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303004924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602948988}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV07
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1711564336 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2055102311959635369, guid: 9e7797bb065982d4497d030f065d6e2f,
@@ -34564,6 +35010,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1857716902}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1861155378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: 4c4e80b50a323dc478f7c84e0b8fdad2,
+    type: 3}
+  m_PrefabInstance: {fileID: 219655022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1861155380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861155378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &1861155381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861155378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602948988}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV07
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1865792759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36475,7 +36966,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 713b33322b495794e92184973ece3034,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2079341250}
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 713b33322b495794e92184973ece3034,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2079341249}
   m_SourcePrefab: {fileID: 100100000, guid: 713b33322b495794e92184973ece3034, type: 3}
 --- !u!4 &2079341247 stripped
 Transform:
@@ -36483,6 +36982,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2079341246}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2079341249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269200002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &2079341250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269200002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602948988}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV07
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &2082272373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: ba7fef4c928d8c4459466bf93171730e,
+    type: 3}
+  m_PrefabInstance: {fileID: 677148539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2082272375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082272373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303ba8648fc31374190232dce2d558bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventList
+--- !u!114 &2082272376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082272373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e06e5c9051c6488bf7526f335692e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventLaunch
+  OnInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1602948988}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: StartEV07
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &2095095312
 PrefabInstance:
   m_ObjectHideFlags: 0

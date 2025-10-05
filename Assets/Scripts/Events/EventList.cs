@@ -57,6 +57,12 @@ public class EventList : MonoBehaviour
         StartCoroutine(ev06shade());
     }
 
+    public void StartEV07()
+    {
+        addeventCount(6);
+        StartCoroutine(ev07rock());
+    }
+
     /* ここからイベント本体の関数 */
     private IEnumerator ev01bench()
     {
@@ -265,7 +271,52 @@ public class EventList : MonoBehaviour
             GameRoot.I.sensitive += 3;
             GameRoot.I.patience += 3;
         }
+
+        GameRoot.I.isEvent = false;
+    }
+
+    private IEnumerator ev07rock()
+    {
+        // 1~9の範囲でランダムな整数値を生成
+        int randomInt = UnityEngine.Random.Range(1, 3);
+
+        switch (randomInt)
+        {
+            case 1:
+                eventMessage = new string[] { "ごつごつした岩だ。" };
+                break;
+            case 2:
+                eventMessage = new string[] { "触ってみるとひんやり冷たい。" };
+                break;
+            case 3:
+                eventMessage = new string[] { "よく見ると苔むした箇所がある。" };
+                break;
+        }
+
+        yield return StartCoroutine(MessageSystem.I.ShowMessages(eventMessage));
+
+        switch (GameRoot.I.eventCount[7])
+        {
+            case 1:
+                GameRoot.I.seeking += 1;
+                break;
+            case 2:
+                GameRoot.I.sensitive += 1;
+                break;
+            case 3:
+                GameRoot.I.insight += 1;
+                break;
+            case 5:
+                GameRoot.I.insight += 2;
+                break;
+            case 10:
+                GameRoot.I.insight += 3;
+                GameRoot.I.patience += 2;
+                break;
+        }
         
         GameRoot.I.isEvent = false;
     }
+    
+
 }
